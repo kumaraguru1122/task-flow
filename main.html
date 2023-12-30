@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+</head>
+<body>
+    <main class="grid min-h-screen bg-bgPrimary place-content-center px-3">
+        <div class="flex flex-col min-h-screen mx-auto sm:border-4 sm:border-bgSecondary">
+            <header class="bg-bgSecondary p-3 flex justify-between items-center">
+                <h1 class="text-txtPrimary tracking-widest flex flex-col">
+                    <span id="greeting" class="text-lg"></span>
+                    <span id="d-username" class="text-xl text-txtPrimary font-bold" contenteditable="true"></span>
+                </h1>
+                <button id="toggle-dark" class="bg-accent p-2 rounded-md ">Dark</button>
+            </header>
+            <section class="p-4">
+                <form action="" class="px-4 mt-4 flex place-content-center gap-5 mx-auto" id="addTask">
+                    <input type="text" name="" id="task" placeholder="Add a task.." class="outline-none bg-transparent border-2 p-2 rounded-md" />
+                    <input type="submit" value="Add" class="bg-accent p-2 rounded-md cursor-pointer" />
+                </form>
+                <ul id="task-list" class="mt-4 flex flex-col gap-2">
+                    <!-- list items -->
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
