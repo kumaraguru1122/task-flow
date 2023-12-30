@@ -181,32 +181,15 @@ if (currentTime < 12) {
   greetings.textContent = "Good Evening,";
 }
 
-//getting username
+//display username
 
-var getUserName = document.getElementById("getUserName");
-var displayUserName = document.querySelector("#d-username");
-let modal = document.getElementById("intro-modal");
-let isFirstVisit = localStorage.getItem("firstVisit") || true;
-let username = document.getElementById("username");
-displayUserName.textContent = localStorage.getItem("username") || "";
+let isFirstVisit = localStorage.getItem("firstVisit") !== null ? localStorage.getItem("firstVisit") : true;
+let username = localStorage.getItem("username") || "enter your name";
+let displayUserName = document.querySelector("#d-username");
 
-if (isFirstVisit == true) {
-  modal.classList.replace("hidden", "grid");
-
-  getUserName.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let username = document.getElementById("username").value;
-    displayUserName.textContent = username;
-    isFirstVisit = false;
-    localStorage.setItem("username", username);
-    localStorage.setItem("firstVisit", isFirstVisit);
-    document.getElementById("username").value = "";
-    modal.classList.add("hidden");
-  });
-}
+displayUserName.textContent = username;
 
 displayUserName.addEventListener("input", function () {
-  const content = this.innerHTML;
+  const content = this.textContent;
   localStorage.setItem("username", content);
 });
