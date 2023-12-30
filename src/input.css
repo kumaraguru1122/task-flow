@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: 248 250 252;
+    --bg-secondary: 227 232 240;
+
+    --txt-primary: 15 23 41;
+    --accent: 39 99 235;
+  }
+
+  .dark {
+    --bg-primary: 15 23 41;
+    --bg-secondary: 51 66 87;
+
+    --txt-primary: 248 250 252;
+    --accent: 58 191 248;
+  }
+}
